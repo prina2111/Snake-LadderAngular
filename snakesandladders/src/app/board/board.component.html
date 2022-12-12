@@ -1,0 +1,8 @@
+<div class="grid-container">
+    <ng-container *ngFor="let item of board">
+        <div class="grid-item" >{{item}} <br> 
+            <span *ngIf="position1==item" style="background-color: red;" class="dot"></span>
+            <span *ngIf="position2==item" style="background-color: blue;" class="dot"></span>
+        </div> 
+    </ng-container>
+  </div>

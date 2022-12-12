@@ -1,0 +1,14 @@
+<p>player works!</p>
+
+<div style="padding: 10px;" *ngFor="let player of players">
+{{player.name}}
+<div *ngIf="player.id == 1" style="padding: 10px;">
+<button (click)="roll(player.id,player.name,1,6)" [id]="player.id"> Roll Dice </button>
+</div>
+
+<div *ngIf="player.id != 1" style="padding: 10px;">
+    <button [disabled]=true (click)="roll(player.id,player.name,1,6)" [id]="player.id"> Roll Dice </button>
+    </div>
+</div>
+
+
